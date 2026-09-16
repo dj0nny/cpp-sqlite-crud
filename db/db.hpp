@@ -6,6 +6,8 @@
 #include "Todo.hpp"
 
 void setup_db(SQLite::Database& db);
-int64_t insert(SQLite::Database& db, const Todo& todo);
+int64_t insert(SQLite::Database& db);
+void select_all(SQLite::Database& db);
+void delete_todo(SQLite::Database& db);
 
 #endif

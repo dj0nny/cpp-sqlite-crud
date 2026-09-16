@@ -4,7 +4,9 @@
 #include <SQLiteCpp/SQLiteCpp.h>
 
 #include "Todo.hpp"
+#include "MenuChoice.hpp"
 #include "db.hpp"
+#include "utils.hpp"
 
 int main() {
   try {
@@ -12,9 +14,26 @@ int main() {
 
     setup_db(db);
 
-    Todo my_todo {"Clean the house"};
+    while (true) {
+      MenuChoice menu_choice {print_menu()};
 
-    insert(db, my_todo);
+      switch (menu_choice) {
+        case MenuChoice::Insert:
+          insert(db);
+          break;
+        case MenuChoice::Show:
+          select_all(db);
+          break;
+        case MenuChoice::Delete:
+          delete_todo(db);
+          break;
+        case MenuChoice::Exit:
+          return 0;
+        default:
+          std::cout << "Invalid choice" << '\n';
+      }
+    
+    }
 
   } catch (std::exception& error) {
     std::cerr << "Error: " << error.what() << '\n';
