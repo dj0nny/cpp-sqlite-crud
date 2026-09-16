@@ -33,3 +33,16 @@ cmake --build build
 
 ---
 
+## Run
+
+Git Bash:
+
+```bash
+./build/cpp-sqlite-crud.exe
+```
+
+PowerShell:
+
+```powershell
+.\build\cpp-sqlite-crud.exe
+```
