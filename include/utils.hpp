@@ -14,5 +14,7 @@ bool is_valid_todo_status_code(int todo_status_code);
 
 std::unique_ptr<Todo> read_todo();
 int read_todo_id();
+void read_description(std::string& description);
+int read_status_code();
 
 #endif

@@ -5,7 +5,10 @@ enum class MenuChoice {
   Exit,
   Insert,
   Show,
-  Delete
+  ShowOne,
+  Search,
+  SearchByStatus,
+  Delete,
 };
 
 #endif

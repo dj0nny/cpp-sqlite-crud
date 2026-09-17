@@ -24,6 +24,15 @@ int main() {
         case MenuChoice::Show:
           select_all(db);
           break;
+        case MenuChoice::ShowOne:
+          select_one(db);
+          break;
+        case MenuChoice::Search:
+          search_by_description(db);
+          break;
+        case MenuChoice::SearchByStatus:
+          search_by_status(db);
+          break;
         case MenuChoice::Delete:
           delete_todo(db);
           break;
