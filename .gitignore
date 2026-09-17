@@ -26,5 +26,4 @@ Makefile
 
 # General file
 *.csv
-*.txt
 *.db3
